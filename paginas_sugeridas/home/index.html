@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envíos DosRuedas — Mensajería Urbana & Logística e-Commerce en Mar del Plata</title>
+  <meta name="description" content="Mensajería en moto y logística e-commerce en Mar del Plata. Envíos Express en 3 hs, Mercado Envíos Flex y servicio LowCost para comercios y particulares.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-brand-blue-500: #0d254c;
+      --color-brand-blue-600: #091a36;
+      --color-brand-blue-400: #1e3a8a;
+      --color-brand-blue-300: #2563eb;
+      --color-brand-blue-100: #dbeafe;
+      --color-brand-blue-50:  #eff6ff;
+
+      --color-brand-yellow-400: #facc15;
+      --color-brand-yellow-500: #f59e0b;
+      --color-brand-yellow-100: #fef9c3;
+
+      --color-white: #ffffff;
+      --color-bg-light: #f8fafc;
+      --color-slate-500: #64748b;
+
+      --radius-md: 8px;
+      --radius-xl: 16px;
+      --radius-2xl: 24px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 2px 4px rgba(13, 37, 76, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(13, 37, 76, 0.1);
+      --shadow-lg: 0 20px 35px -10px rgba(13, 37, 76, 0.18);
+      --shadow-yellow: 0 10px 25px -5px rgba(250, 204, 21, 0.4);
+
+      --font-display: "Anton", sans-serif;
+      --font-subheading: "Bebas Neue", sans-serif;
+      --font-sans: "Outfit", system-ui, sans-serif;
+      --font-mono: "Geist Mono", monospace;
+
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg-light);
+      color: var(--color-brand-blue-500);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Header */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background-color: var(--color-brand-blue-500);
+      color: var(--color-white); padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-size: 1.75rem; color: white; }
+    .brand-logo .accent { color: var(--color-brand-yellow-400); }
+    .brand-icon { width: 2.5rem; height: 2.5rem; background: var(--color-brand-yellow-400); color: var(--color-brand-blue-500); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; font-weight: 900; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-link { font-family: var(--font-subheading); font-size: 1.15rem; color: white; padding: 0.5rem 0.75rem; border-radius: var(--radius-md); transition: var(--transition-smooth); }
+    .nav-link:hover, .nav-link.active { color: var(--color-brand-yellow-400); background: rgba(255,255,255,0.08); }
+    .nav-cta { background: var(--color-brand-yellow-400); color: var(--color-brand-blue-500); font-family: var(--font-subheading); font-size: 1.1rem; font-weight: 700; padding: 0.6rem 1.25rem; border-radius: var(--radius-full); box-shadow: var(--shadow-yellow); display: inline-flex; align-items: center; gap: 0.5rem; }
+
+    /* Hero */
+    .hero-section {
+      margin-top: 4.5rem; background: linear-gradient(135deg, var(--color-brand-blue-500) 0%, var(--color-brand-blue-600) 100%);
+      color: white; padding: 5rem 0 6rem 0; position: relative;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+    @media (min-width: 992px) { .hero-grid { grid-template-columns: 1.2fr 0.8fr; } }
+
+    .badge-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(250,204,21,0.15); border: 1px solid var(--color-brand-yellow-400); color: var(--color-brand-yellow-400); font-family: var(--font-subheading); padding: 0.35rem 1rem; border-radius: var(--radius-full); margin-bottom: 1.25rem; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 0.95; margin-bottom: 1.5rem; }
+    .hero-title .highlight { color: var(--color-brand-yellow-400); background: rgba(250,204,21,0.1); padding: 0 0.5rem; border-radius: var(--radius-md); }
+    .hero-desc { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem; max-width: 40rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--color-brand-yellow-400); color: var(--color-brand-blue-500); font-family: var(--font-subheading); font-size: 1.3rem; padding: 0.8rem 2rem; border-radius: var(--radius-full); font-weight: 700; box-shadow: var(--shadow-yellow); border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); font-family: var(--font-subheading); font-size: 1.3rem; padding: 0.8rem 2rem; border-radius: var(--radius-full); cursor: pointer; }
+
+    /* Services Grid */
+    .services-section { padding: 5rem 0; background: var(--color-white); }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); color: var(--color-brand-blue-500); margin-bottom: 0.5rem; }
+    .section-subtitle { font-size: 1.15rem; color: var(--color-slate-500); max-width: 42rem; margin: 0 auto; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .service-card {
+      background: var(--color-brand-blue-50); border: 2px solid var(--color-brand-blue-100); border-radius: var(--radius-2xl); padding: 2rem;
+      transition: var(--transition-smooth); display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-brand-blue-300); background: white; }
+    .service-card.featured { background: var(--color-brand-blue-500); color: white; border-color: var(--color-brand-yellow-400); }
+    .service-card.featured .service-title { color: white; }
+    .service-card.featured .service-desc { color: rgba(255,255,255,0.85); }
+
+    .service-badge { font-family: var(--font-subheading); font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); width: fit-content; margin-bottom: 1rem; }
+    .badge-yellow { background: var(--color-brand-yellow-400); color: var(--color-brand-blue-500); }
+    .badge-blue { background: var(--color-brand-blue-100); color: var(--color-brand-blue-500); }
+
+    .service-title { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-brand-blue-500); margin-bottom: 0.75rem; }
+    .service-desc { font-size: 0.95rem; color: var(--color-slate-500); margin-bottom: 1.5rem; line-height: 1.6; }
+    .service-btn { margin-top: auto; font-family: var(--font-subheading); font-size: 1.1rem; padding: 0.7rem 1.25rem; border-radius: var(--radius-full); text-align: center; font-weight: 700; }
+
+    /* Testimonials Slider */
+    .testimonials-section { padding: 5rem 0; background: var(--color-brand-blue-50); }
+    .testi-card { background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--color-brand-blue-100); box-shadow: var(--shadow-sm); }
+    .testi-text { font-size: 1.05rem; font-style: italic; color: var(--color-brand-blue-500); margin-bottom: 1.25rem; }
+    .testi-author { font-family: var(--font-subheading); font-size: 1.2rem; font-weight: 700; color: var(--color-brand-blue-500); }
+
+    /* Footer */
+    .site-footer { background: var(--color-brand-blue-500); color: white; padding: 4rem 0 2rem 0; border-top: 4px solid var(--color-brand-yellow-400); margin-top: auto; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
+    .footer-brand h4 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">2R</div>
+        <div>ENVÍOS <span class="accent">DOSRUEDAS</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../home/index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="../cotizar/index.html" class="nav-link">Cotizador</a></li>
+        <li><a href="../enviosexpress/index.html" class="nav-link">Express</a></li>
+        <li><a href="../contacto/index.html" class="nav-link">Contacto</a></li>
+      </ul>
+      <a href="../cotizar/index.html" class="nav-cta">Cotizá tu Envío</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="badge-pill">⚡ Flota Propia en Mar del Plata</div>
+            <h1 class="hero-title">
+              EL MOTOR DE TU <span class="highlight">ÚLTIMA MILLA</span>
+            </h1>
+            <p class="hero-desc">
+              Solución integral de cadetería, mensajería urbana y envíos e-commerce. Entregas en el día con personal capacitado y seguimiento directo.
+            </p>
+            <div class="hero-actions">
+              <a href="../cotizar/index.html" class="btn-primary">Cotizar Envío Ya</a>
+              <a href="../contacto/index.html" class="btn-secondary">Contacto Comercial</a>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,0.08); padding: 2rem; border-radius: var(--radius-2xl); border: 1px solid rgba(255,255,255,0.15);">
+            <h3 style="font-family: var(--font-subheading); font-size: 1.8rem; color: var(--color-brand-yellow-400); margin-bottom: 1rem;">📍 Cobertura Total MDQ</h3>
+            <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.85);">Llegamos a todos los barrios: Centro, Güemes, Los Troncos, Puerto, Mogotes, Constitución y zonas periféricas.</p>
+            <div style="font-family: var(--font-mono); font-size: 0.9rem; background: rgba(0,0,0,0.2); padding: 1rem; border-radius: var(--radius-lg);">
+              🏢 Base Operativa: Friuli 1972, Mar del Plata<br>
+              🕒 Lun a Vie: 09:00 - 18:00 hs
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nuestras Soluciones de Logística</h2>
+          <p class="section-subtitle">Elegí la modalidad que mejor se adapte a tu comercio o necesidad puntual.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card featured">
+            <div>
+              <span class="service-badge badge-yellow">MERCADO LIBRE</span>
+              <h3 class="service-title">Envíos Flex</h3>
+              <p class="service-desc">Entregas el mismo día homologadas para vendedores de MercadoLibre. Mantené tu reputación verde.</p>
+            </div>
+            <a href="../enviosflex/index.html" class="service-btn" style="background: var(--color-brand-yellow-400); color: var(--color-brand-blue-500);">Ver Envíos Flex</a>
+          </div>
+
+          <div class="service-card">
+            <div>
+              <span class="service-badge badge-blue">URGENTE</span>
+              <h3 class="service-title">Envíos Express</h3>
+              <p class="service-desc">Cadetería prioritaria con entrega en franja de 3 horas. Para paquetes urgentes y trámites.</p>
+            </div>
+            <a href="../enviosexpress/index.html" class="service-btn" style="background: var(--color-brand-blue-500); color: white;">Ver Express</a>
+          </div>
+
+          <div class="service-card">
+            <div>
+              <span class="service-badge badge-blue">ECONÓMICO</span>
+              <h3 class="service-title">Envíos LowCost</h3>
+              <p class="service-desc">Repartos programados durante el día con tarifas súper accesibles para negocios con volumen.</p>
+            </div>
+            <a href="../envioslowcost/index.html" class="service-btn" style="background: var(--color-brand-blue-500); color: white;">Ver LowCost</a>
+          </div>
+
+          <div class="service-card">
+            <div>
+              <span class="service-badge badge-blue">CUENTA CORRIENTE</span>
+              <h3 class="service-title">Emprendedores</h3>
+              <p class="service-desc">Planes de pago semanales o quincenales, retiros en tu local y cobro contrarreembolso.</p>
+            </div>
+            <a href="../enviosemprendedores/index.html" class="service-btn" style="background: var(--color-brand-blue-500); color: white;">Ver Plan Pymes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+          <p class="section-subtitle">Comercios y particulares de Mar del Plata que confían en nosotros todos los días.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="testi-card">
+            <p class="testi-text">"Excelente servicio para nuestro e-commerce. Cumplen siempre con las entregas de Flex en tiempo y forma."</p>
+            <div class="testi-author">— Agustín T., Comercio Local</div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-text">"La cadetería express me salvó con un envío urgente a la zona del Puerto. Súper recomendables."</p>
+            <div class="testi-author">— Sol R., Particular</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>ENVÍOS <span style="color:var(--color-brand-yellow-400);">DOSRUEDAS</span></h4>
+          <p style="color:rgba(255,255,255,0.7);">Logística urbana y cadetería en moto en Mar del Plata.</p>
+        </div>
+        <div>
+          <h5 style="font-family:var(--font-subheading); font-size:1.3rem; margin-bottom:1rem; color:var(--color-brand-yellow-400);">Navegación</h5>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; color:rgba(255,255,255,0.8);">
+            <li><a href="../home/index.html">Inicio</a></li>
+            <li><a href="../cotizar/index.html">Cotizador</a></li>
+            <li><a href="../contacto/index.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align:center; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); font-size:0.85rem; color:rgba(255,255,255,0.6);">
+        © 2026 Envíos DosRuedas — Mar del Plata, Argentina.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
