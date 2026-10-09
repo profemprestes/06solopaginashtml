@@ -1,0 +1,42 @@
+# .aiexclude — Reglas de exclusión para Agentes y Asistentes de IA
+
+# Control de Versiones e Historial Interno
+.git/
+.gitignore
+.gitattributes
+
+# Entornos y Archivos Sensibles
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+
+# Archivos y Cachés Temporales de Sistema / IDE
+.vscode/
+.idea/
+.cache/
+.tmp/
+tmp/
+*.tmp
+*.log
+*.bak
+
+# Dependencias y Builds (si se agregan en el futuro)
+node_modules/
+dist/
+build/
+out/
+
+# Archivos Binarios Pesados o Comprimidos
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.iso
+*.exe
+
+# Directorios de Agente / Sistema
+.system_generated/
+scratch/
