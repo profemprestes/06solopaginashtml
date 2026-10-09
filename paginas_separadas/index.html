@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envíos DosRuedas | Design System & Catalog Hub</title>
+  <link rel="stylesheet" href="shared/css/design-tokens.css">
+  <style>
+    body {
+      background-color: var(--color-brand-blue-50);
+      color: var(--color-brand-blue-500);
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-banner {
+      background: var(--color-brand-blue-500);
+      color: var(--color-white);
+      padding: 2.5rem;
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-antigravity-deep);
+      margin-bottom: 2rem;
+    }
+    .grid-catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .card-route {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-brand-blue-100);
+      border-radius: var(--radius-xl);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--default-transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-route:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-float);
+      border-color: var(--color-brand-blue-500);
+    }
+    .route-title {
+      font-family: var(--dt-font-sans);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--color-brand-blue-500);
+      margin-bottom: 0.5rem;
+    }
+    .route-desc {
+      font-size: 0.875rem;
+      color: var(--color-brand-blue-400);
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-banner">
+      <span class="pill-badge pill-badge-yellow" style="margin-bottom: 1rem;">⚡ Design System v1.0</span>
+      <h1 class="font-display" style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #ffffff;">Envíos DosRuedas — Catálogo de Páginas</h1>
+      <p style="font-size: 1.1rem; opacity: 0.9; color: #ffffff;">Hub central de desarrollo, componentes UI y mapa interactivo de rutas de <code>paginas_separadas/</code>.</p>
+    </div>
+
+    <!-- TOKENS QUICK DEMO -->
+    <div style="background: white; padding: 1.5rem; border-radius: var(--radius-xl); margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+      <h2 class="font-subheading" style="color: var(--color-brand-blue-500); font-size: 1.25rem; margin-bottom: 1rem;">Design Tokens en Acción</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <a href="home/home.html" class="btn-primary-yellow">Cotizar Express 🚀</a>
+        <a href="cotizar/cotizar.html" class="btn-secondary-blue">Calculadora Flex</a>
+        <a href="contacto/contacto.html" class="btn-outline-ghost">Contacto</a>
+        <a href="https://wa.me/5492230000000" target="_blank" class="whatsapp-pill">Hablar por WhatsApp 💬</a>
+        <span class="pill-badge live-badge">● Servicio Online MDP</span>
+        <span class="pill-badge alert-badge">⚡ 3 HS EXPRESS</span>
+      </div>
+    </div>
+
+    <!-- CATALOG OF PAGES -->
+    <h2 class="font-subheading" style="color: var(--color-brand-blue-500); font-size: 1.5rem; margin-bottom: 1rem;">Módulos y Secciones Disponibles (14)</h2>
+    <div class="grid-catalog">
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🏠 1. Home / Landing Principal</div>
+          <div class="route-desc">Hero interactivo, calculadora preview, servicios overview y opiniones.</div>
+        </div>
+        <a href="home/home.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver home.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🧮 2. Cotizador / Calculadora MDP</div>
+          <div class="route-desc">Cotización en tiempo real por barrio y peso en Mar del Plata.</div>
+        </div>
+        <a href="cotizar/cotizar.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver cotizar.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">📞 3. Contacto</div>
+          <div class="route-desc">Formulario de consulta directa, mapa e información de contacto.</div>
+        </div>
+        <a href="contacto/contacto.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver contacto.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🚀 4. Envíos Express</div>
+          <div class="route-desc">Cadetería prioritaria con entrega en menos de 3 horas.</div>
+        </div>
+        <a href="enviosexpress/envios-express.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver envios-express.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">📦 5. Envíos Flex</div>
+          <div class="route-desc">Logística homologada Mercado Envíos Flex para e-commerce.</div>
+        </div>
+        <a href="enviosflex/envios-flex.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver envios-flex.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🛍️ 6. Envíos Emprendedores</div>
+          <div class="route-desc">Planes especiales y tarifas reducidas por volumen mensual.</div>
+        </div>
+        <a href="enviosemprendedores/envios-emprendedores.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver envios-emprendedores.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🏭 7. Fulfillment Depósito</div>
+          <div class="route-desc">Almacenamiento, picking, packing y despacho centralizado.</div>
+        </div>
+        <a href="enviosfullfilment/envios-fullfilment.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver envios-fullfilment.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">💡 8. Envíos LowCost</div>
+          <div class="route-desc">Mensajería programada de bajo costo 24/48 hs.</div>
+        </div>
+        <a href="envioslowcost/envios-low-cost.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver envios-low-cost.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">💵 9. Contrarrembolso</div>
+          <div class="route-desc">Cobro en efectivo en el destino con depósito seguro al vendedor.</div>
+        </div>
+        <a href="servicios_contrarrembolso/servicios-contrareembolso.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver servicios-contrareembolso.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">❓ 10. Preguntas Frecuentes (FAQ)</div>
+          <div class="route-desc">Respuestas a dudas comunes de clientes y comercios.</div>
+        </div>
+        <a href="faq/faq.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver faq.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">👥 11. Nosotros</div>
+          <div class="route-desc">Nuestra historia, misión, visión y equipo de cadetes.</div>
+        </div>
+        <a href="nosotros/nosotros.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver nosotros.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">📱 12. Hub de Redes</div>
+          <div class="route-desc">Redes oficiales, canal de WhatsApp y publicaciones recientes.</div>
+        </div>
+        <a href="redes/redes.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver redes.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">🔒 13. Política de Privacidad</div>
+          <div class="route-desc">Términos de protección de datos personales.</div>
+        </div>
+        <a href="politica_privacidad/politica-de-privacidad.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver politica-de-privacidad.html</a>
+      </div>
+
+      <div class="card-route">
+        <div>
+          <div class="route-title">⚖️ 14. Términos y Condiciones</div>
+          <div class="route-desc">Marco legal y cláusulas del servicio de logística.</div>
+        </div>
+        <a href="terminos_condiciones/terminos-y-condiciones.html" class="btn-secondary-blue" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver terminos-y-condiciones.html</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
