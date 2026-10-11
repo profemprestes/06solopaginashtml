@@ -57,3 +57,7 @@ tmp/
 # Local AI / Scratch Directories
 .system_generated/
 scratch/
+
+# Local AI agent installs (machine-local, ECC/Antigravity/Claude Code)
+.agents/
+.claude/
